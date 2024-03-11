@@ -1,19 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Copo Stanley</title>
-    <link rel="stylesheet" href="src/css/style.css">
-</head>
-<body class="antialiased bg-light_color">
+    <link
+      rel="stylesheet"
+      href="src/css/style.css" />
+  </head>
+  <body class="antialiased bg-light_color">
     <header class="header">
-        <div class="">
-            <div class="text-xl">logo</div>
-            <div class=""><i class="fi fi-br-bars-staggered"></i></div>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img
+              src="./assets/stanley.svg"
+              alt="Logo"
+          /></a>
         </div>
-        <div class="">Hhkfkfkf</div>
+
+        <form
+          class="pesquisa"
+          action="/pesquisa">
+          <input
+            type="text"
+            name="pesquisa"
+            placeholder="Pesquisar..." />
+          <button
+            class=""
+            type="submit">
+            <i class="fi fi-br-search"></i>
+          </button>
+        </form>
+
+        <label
+          class="menu-button"
+          for="menu-btn">
+          <input
+            id="menu-btn"
+            type="checkbox"
+            aria-label="Abrir menu" />
+          <i class="fi fi-br-bars-staggered open-menu-icon"></i>
+          <i class="fi fi-br-cross close-menu-icon"></i>
+          <span class="sr-only focus:not-sr-only">Menu</span>
+        </label>
+        <div class="menu">
+          
+            
+          <div class="mx-auto">
+            <img
+            class="md:hidden min-w-[300px] w-[300px]"
+              src="./assets/stanley.svg"
+              alt="Logo"
+          />
+          </d>
+          <ul class="menu-content">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-</body>
+
+    <!-- Conteudo principal -->
+
+    <main class="main">
+      
+      <nav class="">
+        <a href="#">Copos</a>
+        <span>/</span>
+        <a href="#">Stanley</a>
+        
+      </nav>
+      <section class="product">
+        <div class="galery">
+          
+            <img
+              class="max-w-64"
+              src="./assets/img/stanley-black.jpg"
+              alt="" />
+            <img
+              class="max-w-64 hidden"
+              src="./assets/img/stanley-green.jpg"
+              alt="" />
+            <img
+              class="max-w-64 hidden"
+              src="./assets/img/stanley-white.jpg"
+              alt="" />
+          
+        </div>
+        
+        <!-- Detalhes -->
+        <div class="detalhes">
+          <div>
+            <h2>Copo Stanley black</h2>
+            <div>Avaliação</div>
+            <button>R$ 100,00</button>
+          </div>
+
+          <h3>Detalhes</h3>
+          esse elit nisi sunt non adipisicing ad veniam laboris qui adipisicing
+          officia adipisicing mollit occaecat consequat ad dolor adipisicing
+          occaecat excepteur dolor ea deserunt aliquip ex tempor mollit et
+          aliqua non cillum duis laborum ut quis non nulla velit Lorem consequat
+          anim consectetur ex nostrud dolore eiusmod ullamco irure fugiat sunt
+          eiusmod in ipsum Lorem excepteur dolor officia ipsum do ullamco velit
+          proident et nulla ipsum aliquip ipsum enim reprehenderit nulla ea
+          nulla quis adipisicing quis ex exercitation ullamco reprehenderit non
+          eiusmod nisi elit veniam magna in aliqua tempor nulla id consectetur
+          sit veniam fugiat minim do adipisicing sint id
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

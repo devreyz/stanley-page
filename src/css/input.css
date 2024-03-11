@@ -2,11 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.header{
-    @apply w-full h-16 bg-secondary flex items-center flex-col
+body {
+  @apply bg-gray-50 space-y-4;
 }
-.header > div{
-    @apply flex w-full max-w-7xl mx-auto justify-between px-4
+
+.header {
+  @apply fixed w-full h-16 bg-headerbg flex items-center justify-center flex-col text-white relative;
+}
+.navbar {
+  @apply flex w-full h-full max-w-7xl mx-auto justify-between items-center px-4 gap-8;
+}
+.logo {
+}
+.logo a {
+  @apply w-10;
+}
+.logo img {
+  @apply h-16 invert flex-1;
+}
+
+/*  sidebar */
+.menu {
+  @apply flex flex-col fixed top-0 left-0 w-0 overflow-hidden bg-menu shadow-lg md:shadow-none h-screen transition-[width] ease-in-out duration-300 z-10;
+  @apply md:relative md:w-fit md:h-fit md:justify-end md:bg-transparent;
+}
+.menu-content {
+  @apply flex flex-col p-3 w-full min-w-fit;
+  @apply md:flex-row md:gap-4;
+}
+.navbar:has(.menu-button input[type="checkbox"]:checked) .menu {
+  @apply w-[300px] max-w-[50%] md:min-w-fit;
+}
+/* Menu button */
+.close-menu-icon {
+  @apply hidden;
+}
+.navbar:has(.menu-button input[type="checkbox"]:checked) .open-menu-icon {
+  @apply hidden;
+}
+.navbar:has(.menu-button input[type="checkbox"]:checked) .close-menu-icon {
+  @apply block;
+}
+.menu-button {
+  @apply text-xl z-[1] select-none items-center md:hidden before:bg-transparent flex;
+}
+.navbar:has(.menu-button input[type="checkbox"]:checked) .menu-button {
+  @apply before:w-screen before:h-screen before:bg-black/70 before:absolute before:top-0 before:left-0 before:z-[-1] before:ease-in-out before:duration-300 before:backdrop-blur-[3px] before:transition-[backdrop-filter];
+}
+.menu-button input[type="checkbox"] {
+  @apply hidden;
+}
+/* Pesquisa */
+
+.pesquisa {
+  @apply bg-white text-slate-800 px-2 rounded-md flex items-center flex-1 h-7;
+}
+.pesquisa input[type="text"] {
+  @apply flex-1 focus:outline-none text-textcolor placeholder:text-textcolor/30 w-full text-base;
+}
+.pesquisa button {
+  @apply pl-2;
+}
+.main {
+  @apply max-w-7xl mx-auto px-4;
+}
+.product {
+  @apply flex flex-col md:flex-row items-center gap-4;
+}
+.galery {
+  @apply shadow-lg flex flex-1 w-full justify-center rounded-md p-4 bg-white;
+}
+.detalhes {
+  @apply flex-1;
 }
