@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-50 space-y-4;
+  @apply bg-gray-100 space-y-4;
 }
 
 .header {
-  @apply fixed w-full h-16 bg-headerbg flex items-center justify-center flex-col text-white relative;
+  @apply w-full h-16 bg-headerbg flex items-center justify-center flex-col text-white relative;
 }
 .navbar {
   @apply flex w-full h-full max-w-7xl mx-auto justify-between items-center px-4 gap-8;
@@ -30,6 +30,7 @@ body {
   @apply flex flex-col p-3 w-full min-w-fit;
   @apply md:flex-row md:gap-4;
 }
+/* Menu aberto */
 .navbar:has(.menu-button input[type="checkbox"]:checked) .menu {
   @apply w-[300px] max-w-[50%] md:min-w-fit;
 }
@@ -67,11 +68,46 @@ body {
   @apply max-w-7xl mx-auto px-4;
 }
 .product {
-  @apply flex flex-col md:flex-row items-center gap-4;
+  @apply grid grid-cols-1 md:max-h-screen overflow-hidden relative  md:grid-cols-2 items-center gap-4 p-4;
 }
 .galery {
-  @apply shadow-lg flex flex-1 w-full justify-center rounded-md p-4 bg-white;
+  @apply shadow-lg   w-full h-full justify-center rounded-md p-4 bg-white;
+}
+.galery img {
+  @apply mx-auto;
 }
 .detalhes {
-  @apply flex-1;
+  @apply space-y-6 h-full;
+}
+.product-name {
+  @apply flex justify-between  items-center;
+}
+.product-name h2 {
+  @apply text-2xl font-extrabold text-primary;
+}
+.avaliacao i {
+  @apply text-amber-400;
+}
+
+.select-color {
+  @apply flex items-center space-x-3;
+}
+.color-label {
+  @apply relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-900;
+}
+.color-icon {
+  @apply h-8 w-8  rounded-full border border-black border-opacity-10;
+}
+
+label:has(input[type="radio"]:checked) {
+  @apply border-2 border-primary;
+}
+.modelo form {
+  @apply space-y-4;
+}
+.row {
+  @apply space-y-3;
+}
+.button-primary {
+  @apply bg-primary px-4 py-2 rounded-md shadow-md;
 }
