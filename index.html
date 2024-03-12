@@ -5,7 +5,9 @@
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
-      <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
@@ -50,15 +52,12 @@
           <i class="fi fi-br-cross close-menu-icon"></i>
         </label>
         <div class="menu">
-          
-            
           <div class="mx-auto">
             <img
-            class="md:hidden min-w-[300px] w-[300px]"
+              class="md:hidden min-w-[300px] w-[300px]"
               src="./assets/stanley.svg"
-              alt="Logo"
-          />
-          </d>
+              alt="Logo" />
+          </div>
           <ul class="menu-content">
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
@@ -70,29 +69,23 @@
 
     <!-- Conteudo principal -->
 
-    <main class="main ">
-      
+    <main class="main">
       <nav class="">
         <a href="#">Copos</a>
         <span>/</span>
         <a href="#">Stanley</a>
-        
       </nav>
       <section class="product">
         <div class="galery">
-          
-            <img
-              class="max-w-64"
-              src="./assets/img/copo Azalea cor.jpg"
-              />
-          
+          <img
+            class="max-w-64"
+            src="./assets/img/copo Azalea cor.jpg" />
         </div>
-        
+
         <!-- Detalhes -->
         <div class="detalhes">
-
-            <div class="product-name">
-              <h2 class="">Copo Stanley black</h2>
+          <div class="product-name">
+            <h2 class="">Copo Stanley Azalea</h2>
             <div class="avaliacao">
               <span>4,9</span>
               <i class="fi fi-ss-star"></i>
@@ -104,150 +97,173 @@
           </div>
           <div class="modelo">
             <form action="">
-              
-             <fieldset class="">
-              <legend class="sr-only">Choose a color</legend>
-              <div class="select-color">
+              <fieldset class="">
+                <legend class="sr-only">Selecionar cor</legend>
+                <div class="select-color">
+                  <label class="color-label">
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="White"
+                      class="sr-only"
+                      aria-labelledby="color-choice-0-label" />
+                    <span
+                      id="color-choice-0-label"
+                      class="sr-only"
+                      >White</span
+                    >
+                    <span
+                      aria-hidden="true"
+                      class="color-icon bg-white"></span>
+                  </label>
+                  <label class="color-label">
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Gray"
+                      class="sr-only"
+                      aria-labelledby="color-choice-1-label" />
+                    <span
+                      id="color-choice-1-label"
+                      class="sr-only"
+                      >Gray</span
+                    >
+                    <span
+                      aria-hidden="true"
+                      class="color-icon bg-pink-500"></span>
+                  </label>
+                  <label class="color-label">
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Black"
+                      class="sr-only"
+                      aria-labelledby="color-choice-2-label" />
+                    <span
+                      id="color-choice-2-label"
+                      class="sr-only"
+                      >Black</span
+                    >
+                    <span
+                      aria-hidden="true"
+                      class="color-icon bg-blue-900"></span>
+                  </label>
+
+                  <label class="color-label">
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Black"
+                      class="sr-only"
+                      aria-labelledby="color-choice-2-label" />
+                    <span
+                      id="color-choice-2-label"
+                      class="sr-only"
+                      >Black</span
+                    >
+                    <span
+                      aria-hidden="true"
+                      class="color-icon bg-cyan-600"></span>
+                  </label>
+
+                  <label class="color-label">
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Black"
+                      class="sr-only"
+                      aria-labelledby="color-choice-2-label" />
+                    <span
+                      id="color-choice-2-label"
+                      class="sr-only"
+                      >Black</span
+                    >
+                    <span
+                      aria-hidden="true"
+                      class="color-icon bg-orange-400"></span>
+                  </label>
+                  <label class="color-label">
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Black"
+                      class="sr-only"
+                      aria-labelledby="color-choice-2-label" />
+                    <span
+                      id="color-choice-2-label"
+                      class="sr-only"
+                      >Black</span
+                    >
+                    <span
+                      aria-hidden="true"
+                      class="color-icon bg-pink-100"></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="row flex justify-between items-center">
                 
-                <label
-                  class="color-label"
-                >
+                <div class="input-quantidade">
+                <label for="quantidade">Quantidade:</label>
+                  <button
+                    type="button"
+                    onclick="if(quantidade.value > 1) quantidade.value--">
+                    -
+                  </button>
                   <input
-                    type="radio"
-                    name="color-choice"
-                    value="White"
-                    class="sr-only"
-                    aria-labelledby="color-choice-0-label"
-                  />
-                  <span id="color-choice-0-label" class="sr-only">White</span>
-                  <span
-                    aria-hidden="true"
-                    class="color-icon bg-white"
-                  ></span>
-                </label>
-                <!-- Active and Checked: "ring ring-offset-1" Not Active and Checked: "ring-2" -->
-                <label
-                  class="color-label"
-                >
-                  <input
-                    type="radio"
-                    name="color-choice"
-                    value="Gray"
-                    class="sr-only"
-                    aria-labelledby="color-choice-1-label"
-                  />
-                  <span id="color-choice-1-label" class="sr-only">Gray</span>
-                  <span
-                    aria-hidden="true"
-                    class="color-icon bg-pink-500"
-                  ></span>
-                </label>
-                <!-- Active and Checked: "ring ring-offset-1" Not Active and Checked: "ring-2" -->
-                <label
-                  class="color-label"
-                >
-                  <input
-                    type="radio"
-                    name="color-choice"
-                    value="Black"
-                    class="sr-only"
-                    aria-labelledby="color-choice-2-label"
-                  />
-                  <span id="color-choice-2-label" class="sr-only">Black</span>
-                  <span
-                    aria-hidden="true"
-                    class="color-icon bg-blue-900"
-                  ></span>
-                </label>
-
-                <label
-                  class="color-label"
-                >
-                  <input
-                    type="radio"
-                    name="color-choice"
-                    value="Black"
-                    class="sr-only"
-                    aria-labelledby="color-choice-2-label"
-                  />
-                  <span id="color-choice-2-label" class="sr-only">Black</span>
-                  <span
-                    aria-hidden="true"
-                    class="color-icon bg-cyan-600"
-                  ></span>
-                </label>
-
-                <label
-                  class="color-label"
-                >
-                  <input
-                    type="radio"
-                    name="color-choice"
-                    value="Black"
-                    class="sr-only"
-                    aria-labelledby="color-choice-2-label"
-                  />
-                  <span id="color-choice-2-label" class="sr-only">Black</span>
-                  <span
-                    aria-hidden="true"
-                    class="color-icon bg-orange-400"
-                  ></span>
-                </label>
-                <label
-                  class="color-label"
-                >
-                  <input
-                    type="radio"
-                    name="color-choice"
-                    value="Black"
-                    class="sr-only"
-                    aria-labelledby="color-choice-2-label"
-                  />
-                  <span id="color-choice-2-label" class="sr-only">Black</span>
-                  <span
-                    aria-hidden="true"
-                    class="color-icon bg-pink-100"
-                  ></span>
-                </label>
+                    type="number"
+                    id="quantidade"
+                    name="quantidade"
+                    value="1"
+                    min="1" />
+                  <button
+                    type="button"
+                    onclick="quantidade.value++">
+                    +
+                  </button>
+                </div>
+                <button class="button-accent" type="button"><i class="fi fi-br-shopping-cart"></i></button>
+                
               </div>
-            </fieldset>
-
-
-            <div class="row flex justify-between items-center">
-              <div>
-                Quantidade
-              
+              <div class="row">
+                <h3 class="text-sm font-medium text-gray-900">
+                  Características
+                </h3>
+                <div class="mt-4">
+                  <ul
+                    role="list"
+                    class="list-disc space-y-2 pl-4 text-sm">
+                    <li class="text-gray-400">
+                      <span class="text-gray-600">Marca:</span>
+                      <span class="text-gray-600">Stanley</span>
+                    </li>
+                    <li class="text-gray-400">
+                      <span class="text-gray-600">Material:</span>
+                      <span class="text-gray-600">Aço Inoxídavel</span>
+                    </li>
+                    <li class="text-gray-400">
+                      <span class="text-gray-600">Cor:</span>
+                      <span class="text-gray-600">Azalea</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <button class="button-primary">R$ 89,00</button>
-            </div>
-            <div class="row">
-              <h3 class="text-sm font-medium text-gray-900">Características</h3>
-              <div class="mt-4">
-                <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                  <li class="text-gray-400">
-                    <span class="text-gray-600">Marca:</span>
-                    <span class="text-gray-600">Stanley</span>
-                  </li>
-                  <li class="text-gray-400">
-                    <span class="text-gray-600">Material:</span>
-                    <span class="text-gray-600">Aço Inoxídavel</span>
-                  </li>
-                  <li class="text-gray-400">
-                    <span class="text-gray-600">Cor:</span>
-                    <span class="text-gray-600">Azalea</span>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-             <h3 class="text-sm font-medium text-gray-900">Descrição</h3>
+              <h3 class="text-sm font-medium text-gray-900">Descrição</h3>
               <div class="space-y-6">
                 <p class="text-base text-gray-900">
-                  Introduza um novo nível de praticidade e durabilidade à sua rotina diária com o Copo Stanley. Criado pela renomada marca Stanley, este copo representa a fusão perfeita entre funcionalidade e estilo. Construído com materiais de alta qualidade e uma atenção meticulosa aos detalhes, o Copo Stanley oferece uma experiência de consumo superior, seja no trabalho, em casa ou em aventuras ao ar livre. Com seu design elegante e resistente, este copo é a escolha ideal para quem valoriza qualidade e desempenho. Desfrute de suas bebidas favoritas com confiança, sabendo que o Copo Stanley está sempre pronto para acompanhá-lo em todas as suas jornadas.
+                  Introduza um novo nível de praticidade e durabilidade à sua
+                  rotina diária com o Copo Stanley. Criado pela renomada marca
+                  Stanley, este copo representa a fusão perfeita entre
+                  funcionalidade e estilo. Construído com materiais de alta
+                  qualidade e uma atenção meticulosa aos detalhes, o Copo
+                  Stanley oferece uma experiência de consumo superior, seja no
+                  trabalho, em casa ou em aventuras ao ar livre. Com seu design
+                  elegante e resistente, este copo é a escolha ideal para quem
+                  valoriza qualidade e desempenho. Desfrute de suas bebidas
+                  favoritas com confiança, sabendo que o Copo Stanley está
+                  sempre pronto para acompanhá-lo em todas as suas jornadas.
                 </p>
               </div>
-
-
             </form>
           </div>
         </div>

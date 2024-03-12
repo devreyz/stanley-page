@@ -32,7 +32,7 @@ body {
 }
 /* Menu aberto */
 .navbar:has(.menu-button input[type="checkbox"]:checked) .menu {
-  @apply w-[300px] max-w-[50%] md:min-w-fit;
+  @apply w-fir max-w-[90%] md:min-w-fit;
 }
 /* Menu button */
 .close-menu-icon {
@@ -68,7 +68,7 @@ body {
   @apply max-w-7xl mx-auto px-4;
 }
 .product {
-  @apply grid grid-cols-1 md:max-h-screen overflow-hidden relative  md:grid-cols-2 items-center gap-4 p-4;
+  @apply grid grid-cols-1 overflow-hidden relative  md:grid-cols-2 items-center gap-4 p-4;
 }
 .galery {
   @apply shadow-lg   w-full h-full justify-center rounded-md p-4 bg-white;
@@ -83,7 +83,7 @@ body {
   @apply flex justify-between  items-center;
 }
 .product-name h2 {
-  @apply text-2xl font-extrabold text-primary;
+  @apply text-2xl font-extrabold;
 }
 .avaliacao i {
   @apply text-amber-400;
@@ -110,4 +110,17 @@ label:has(input[type="radio"]:checked) {
 }
 .button-primary {
   @apply bg-primary px-4 py-2 rounded-md shadow-md;
+}
+.button-accent{
+  @apply bg-accent px-4 py-2 rounded-md shadow-md;
+}
+.input-quantidade{
+  @apply text-xl 
+}
+.input-quantidade button{
+  
+  @apply border border-slate-500 bg-accent w-8 rounded-md
+}
+.input-quantidade input{
+  @apply w-12 text-center
 }
