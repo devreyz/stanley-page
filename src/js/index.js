@@ -1,5 +1,5 @@
 const produtoImagem = document.querySelector(".produto-imagem");
-
+const produtoNome = document.querySelector(".product-name");
 const produto = {
   nome: "Copo Stanley",
   variacoes: [
@@ -36,21 +36,40 @@ const produto = {
   ],
 };
 
-const selectColorContent = document.createElement("div");
+let selectColorContent = document.createElement("div");
 selectColorContent.classList.add("select-color");
 
 produto.variacoes.forEach((item) => {
-  selectColorContent.innerHTML += `<label class="color-label">
-                    <input
-                      type="radio"
-                      name="color-choice"
-                      value="White"
-                      class="sr-only"
-                      aria-labelledby="color-choice-0-label"
-                    />
-                    <span id="color-choice-0-label" class="sr-only">White</span>
-                    <span aria-hidden="true" class="color-icon bg-white"></span>
-                  </label>`;
+  let label = document.createElement("label");
+  let input = document.createElement("input");
+  let span1 = document.createElement("span");
+  let span2 = document.createElement("span");
+
+  // Define as propriedades dos elementos
+  label.className = "color-label";
+  input.type = "radio";
+  input.name = "color-choice";
+  input.value = item.cor.nome;
+  input.className = "sr-only";
+  input.setAttribute("aria-labelledby", `color-choice-0-label`);
+  span1.id = `color-choice-0-label`;
+  span1.className = "sr-only";
+  span1.innerText = item.nome;
+  span2.setAttribute("aria-hidden", "true");
+  span2.className = `color-icon`;
+  span2.style.background = item.cor.hex.toLowerCase()
+
+  // Anexa os elementos filhos ao elemento pai
+  label.appendChild(input);
+  label.appendChild(span1);
+  label.appendChild(span2);
+input.oninput = () =>{
+    produtoNome.textContent = item.nome
+    produtoImagem.src = "./assets/img/" +item.imgSrc
+}
+
+selectColorContent.appendChild(label);
+
 });
 
-document.querySelector(".select-color").innerHTML = selectColorContent.innerHTML
+document.querySelector(".select-color").appendChild(selectColorContent)

@@ -77,15 +77,15 @@ body {
   @apply shadow-lg   w-full h-full justify-center rounded-md p-4 bg-white;
 }
 .galery img {
-  @apply mx-auto;
+  @apply mx-auto flex justify-center items-center;
 }
 .detalhes {
   @apply space-y-6 h-full;
 }
-.product-name {
+.product-info {
   @apply flex justify-between  items-center;
 }
-.product-name h2 {
+.product-info h2 {
   @apply text-2xl font-extrabold;
 }
 .avaliacao i {
