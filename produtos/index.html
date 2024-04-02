@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Copo Stanley</title>
+    <link
+      rel="stylesheet"
+      href="../src/css/style.css" />
+  </head>
+  <body class="antialiased p bg-light_color">
+  
+    <header id="header">
+      <div class="inner">
+        <a
+          href="/"
+          class="logo">
+          <img
+            class=""
+            src="../assets/stanley.svg"
+            alt="" />
+          </a
+        >
+        <nav
+          id="nav"
+          class="navbar">
+          <a
+            href="/"
+            class="nav-link"
+            >Inicio</a
+          >
+          <a
+            href=""
+            class="nav-link"
+            >Carrinho</a
+          >
+          <a
+            href=""
+            class="nav-link gri"
+            >Saiba Mais</a
+          >
+        </nav>
+
+        <button
+          id="sidebarToggle"
+          class="sidebar-toggle">
+          <i class="fi fi-br-menu-burger"></i>
+          <i class="fi fi-br-cross"></i>
+        </button>
+      </div>
+    </header>
+    <div
+      id="sidebar"
+      class="sidebar">
+      <nav class="sidebar-nav">
+        <a
+          href=""
+          class="nav-link"
+          >Inicio</a
+        >
+        <a
+          href=""
+          class="nav-link"
+          >Carrinho</a
+        >
+        <a
+          href=""
+          class="nav-link"
+          >Saiba Mais</a
+        >
+      </nav>
+    </div>
+
+    <!-- Conteudo principal -->
+
+    <main class="main">
+      <section class="product">
+        <div class="galery">
+          <img
+            class="produto-imagem"
+            src="./assets/img/copo Azalea cor.jpg" />
+        </div>
+
+        <!-- Detalhes -->
+        <div class="detalhes prose">
+          <div class="product-info">
+            <h2 class="product-name">Copo Stanley Azalea</h2>
+            <div class="avaliacao">
+              <span>4,9</span>
+              <i class="fi fi-ss-star"></i>
+              <i class="fi fi-ss-star"></i>
+              <i class="fi fi-ss-star"></i>
+              <i class="fi fi-ss-star"></i>
+              <i class="fi fi-ss-star"></i>
+            </div>
+          </div>
+          <div class="preco">
+            <span>R$ 89,00</span>
+          </div>
+          <div class="modelo">
+            <form action="">
+              <fieldset class="">
+                <legend class="sr-only">Selecionar cor</legend>
+                <div class="select-color"></div>
+              </fieldset>
+              <fieldset class="">
+                <legend class="sr-only">Selecionar quantidade</legend>
+                <div class="flex justify-between items-center">
+                  <div class="input-quantidade">
+                    
+                  <div class="comprar">
+                    <button
+                      class="button-primary"
+                      type="submit">
+                      Comprar
+                    </button>
+                    <button
+                      class="button-accent"
+                      type="button">
+                      <i class="fi fi-br-shopping-cart"></i>
+                    </button>
+                  </div>
+                    <div class="setQuantidade">
+                      <button
+                      class="button-accent"
+                        type="button"
+                        onclick="if(quantidade.value > 1) quantidade.value--">
+                        -
+                      </button>
+                      <input
+                        
+                        type="number"
+                        id="quantidade"
+                        name="quantidade"
+                        value="1"
+                        min="1" />
+                      <button
+                      class="button-accent"
+                        type="button"
+                        onclick="quantidade.value++">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="row">
+                <h3 class="text-sm font-medium text-gray-900">
+                  Características
+                </h3>
+                <div class="mt-4">
+                  <ul
+                    role="list"
+                    class="list-disc space-y-2 pl-4 text-sm">
+                    <li class="text-gray-400">
+                      <span class="text-gray-600">Marca:</span>
+                      <span class="text-gray-600">Stanley</span>
+                    </li>
+                    <li class="text-gray-400">
+                      <span class="text-gray-600">Material:</span>
+                      <span class="text-gray-600">Aço Inoxídavel</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="text-sm font-medium text-gray-900">Descrição</h3>
+              <div class="space-y-6">
+                <p class="text-base text-gray-900">
+                  Introduza um novo nível de praticidade e durabilidade à sua
+                  rotina diária com o Copo Stanley. Criado pela renomada marca
+                  Stanley, este copo representa a fusão perfeita entre
+                  funcionalidade e estilo. Construído com materiais de alta
+                  qualidade e uma atenção meticulosa aos detalhes, o Copo
+                  Stanley oferece uma experiência de consumo superior, seja no
+                  trabalho, em casa ou em aventuras ao ar livre. Com seu design
+                  elegante e resistente, este copo é a escolha ideal para quem
+                  valoriza qualidade e desempenho. Desfrute de suas bebidas
+                  favoritas com confiança, sabendo que o Copo Stanley está
+                  sempre pronto para acompanhá-lo em todas as suas jornadas.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container prose prose-invert">
+        <div class="footer-section">
+          <h3>Sobre Nós</h3>
+          <p>
+            Stanley, com seu legado centenário, é famosa por copos duráveis que
+            mantêm a temperatura das bebidas. Escolha Stanley para qualidade e
+            inovação. 🍵
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="#">Termos de Serviço</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>Endereço da loja</p>
+          <p>Telefone: (XX) XXXX-XXXX</p>
+          <p>Email: info@example.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom prose prose-invert">
+        <p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../src/js/index.js"></script>
+  </body>
+</html>

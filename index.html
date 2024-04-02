@@ -1,154 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
-    />
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
     <link
       rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Copo Stanley</title>
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../src/css/style.css" />
   </head>
   <body class="antialiased bg-light_color">
-    <header class="header">
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html"><img src="./assets/stanley.svg" alt="Logo" /></a>
-        </div>
+   
+    <header id="header">
+      <div class="inner">
+        <a
+          href="/"
+          class="logo">
+          <img
+            class=""
+            src="assets/stanley.svg"
+            alt="" />
+          </a
+        >
+        <nav
+          id="nav"
+          class="navbar">
+          <a
+            href="/"
+            class="nav-link"
+            >Inicio</a
+          >
+          <a
+            href=""
+            class="nav-link"
+            >Carrinho</a
+          >
+          <a
+            href="#more"
+            class="nav-link gri"
+            >Saiba Mais</a
+          >
+        </nav>
 
-        <form class="pesquisa" action="/pesquisa">
-          <input type="text" name="pesquisa" placeholder="Pesquisar..." />
-          <button class="" type="submit">
-            <i class="fi fi-br-search"></i>
-          </button>
-        </form>
-
-        <label class="menu-button" for="menu-btn">
-          <input id="menu-btn" type="checkbox" aria-label="Abrir menu" />
-          <i class="fi fi-br-bars-staggered open-menu-icon"></i>
-          <i class="fi fi-br-cross close-menu-icon"></i>
-        </label>
-        <div class="menu">
-          <div class="mx-auto">
-            <img
-              class="md:hidden min-w-[300px] w-[300px]"
-              src="./assets/stanley.svg"
-              alt="Logo"
-            />
-          </div>
-          <ul class="menu-content">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-          </ul>
-        </div>
-      </nav>
+        <button
+          id="sidebarToggle"
+          class="sidebar-toggle">
+          <i class="fi fi-br-menu-burger"></i>
+          <i class="fi fi-br-cross"></i>
+        </button>
+      </div>
     </header>
-
-    <!-- Conteudo principal -->
-
-    <main class="main">
-      <nav class="">
-        <a href="#">Copos</a>
-        <span>/</span>
-        <a href="#">Stanley</a>
+    <div
+      id="sidebar"
+      class="sidebar">
+      <nav class="sidebar-nav">
+        <a
+          href="/"
+          class="nav-link"
+          >Inicio</a
+        >
+        <a
+          href=""
+          class="nav-link"
+          >Carrinho</a
+        >
+        <a
+          href=""
+          class="nav-link"
+          >Saiba Mais</a
+        >
       </nav>
-      <section class="product">
-        <div class="galery">
-          <img class="produto-imagem " src="./assets/img/copo Azalea cor.jpg" />
+    </div>
+    <!-- Conteudo principal -->
+    <section class="home bg-gradient-to-tr from-slate-900 to-blue-500">
+      <!-- <img
+        class="bg"
+        src="assets/img/background-image.jpg"
+        alt="" /> -->
+      <div
+        class="prose mx-auto prose-invert lg:prose-xl content-box">
+        <div class="bg-white shadow-md rounded-md">
+          
+          <img class="drop-shadow-lg p-4" src="assets/img/copos-stanley.png" alt="" />
         </div>
-
-        <!-- Detalhes -->
-        <div class="detalhes">
-          <div class="product-info">
-            <h2 class="product-name">Copo Stanley Azalea</h2>
-            <div class="avaliacao">
-              <span>4,9</span>
-              <i class="fi fi-ss-star"></i>
-              <i class="fi fi-ss-star"></i>
-              <i class="fi fi-ss-star"></i>
-              <i class="fi fi-ss-star"></i>
-              <i class="fi fi-ss-star"></i>
-            </div>
-          </div>
-          <div class="modelo">
-            <form action="">
-              <fieldset class="">
-                <legend class="sr-only">Selecionar cor</legend>
-                <div class="select-color">
-                  
-                </div>
-              </fieldset>
-
-              <div class=" flex justify-between items-center">
-                <div class="input-quantidade">
-                  <label for="quantidade">Quantidade:</label>
-                  <button
-                    type="button"
-                    onclick="if(quantidade.value > 1) quantidade.value--"
-                  >
-                    -
-                  </button>
-                  <input
-                    type="number"
-                    id="quantidade"
-                    name="quantidade"
-                    value="1"
-                    min="1"
-                  />
-                  <button type="button" onclick="quantidade.value++">+</button>
-                </div>
-                <div class="comprar">
-                  <button class="button-primary" type="submit">Comprar</button>
-                  <button class="button-accent" type="button">
-                    <i class="fi fi-br-shopping-cart"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="row">
-                <h3 class="text-sm font-medium text-gray-900">
-                  Características
-                </h3>
-                <div class="mt-4">
-                  <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                    <li class="text-gray-400">
-                      <span class="text-gray-600">Marca:</span>
-                      <span class="text-gray-600">Stanley</span>
-                    </li>
-                    <li class="text-gray-400">
-                      <span class="text-gray-600">Material:</span>
-                      <span class="text-gray-600">Aço Inoxídavel</span>
-                    </li>
-                   
-                  </ul>
-                </div>
-              </div>
-              <h3 class="text-sm font-medium text-gray-900">Descrição</h3>
-              <div class="space-y-6">
-                <p class="text-base text-gray-900">
-                  Introduza um novo nível de praticidade e durabilidade à sua
-                  rotina diária com o Copo Stanley. Criado pela renomada marca
-                  Stanley, este copo representa a fusão perfeita entre
-                  funcionalidade e estilo. Construído com materiais de alta
-                  qualidade e uma atenção meticulosa aos detalhes, o Copo
-                  Stanley oferece uma experiência de consumo superior, seja no
-                  trabalho, em casa ou em aventuras ao ar livre. Com seu design
-                  elegante e resistente, este copo é a escolha ideal para quem
-                  valoriza qualidade e desempenho. Desfrute de suas bebidas
-                  favoritas com confiança, sabendo que o Copo Stanley está
-                  sempre pronto para acompanhá-lo em todas as suas jornadas.
-                </p>
-              </div>
-            </form>
-          </div>
+        <div>
+        <h1>
+          Copo Stanley <br />
+          Aventura em Cada Gole
+        </h1>
+        <p>
+          O Copo Stanley combina durabilidade, estilo e funcionalidade para ser
+          o seu companheiro ideal em todas as aventuras. Com isolamento térmico
+          de parede dupla, mantém suas bebidas quentes ou geladas por horas.
+          Disponível em cores vibrantes e tamanhos convenientes, é perfeito para
+          qualquer ocasião. Explore o mundo com confiança, estilo e praticidade,
+          com o Copo Stanley ao seu lado.
+        </p>
+        <a class="bg-green-500 uppercase text-2xl float-right px-4 py-2 rounded-full " href="produtos/">Peça o seu</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+    
 
     <footer>
       <div class="footer-container">
@@ -179,7 +138,7 @@
         <p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
       </div>
     </footer>
-
-    <script src="src/js/index.js"></script>
+    
+    <script src="src/js/index.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

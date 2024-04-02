@@ -6,16 +6,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#5EE088",
+        primary: colors.green[700],
         secondary: "#87CEEB",
-        accent: "#FFD966",
+        accent: colors.amber[500],
         darkcolor: "#1A2736",
         lightcolor: "#D5D8DE",
         textcolor: colors.slate['800'],
         menu: colors.gray['500'],
-        headerbg: colors.gray['500']
+        headerbg: colors.slate['900']
+      },
+      dropShadow: {
+        'blur-neon': '0 0 5px rgba(10, 250, 200, 1)'
+        
       }
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/typography')]
 };

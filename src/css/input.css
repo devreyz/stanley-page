@@ -3,55 +3,49 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-100 space-y-4;
+  @apply bg-gray-100 antialiased bg-lightcolor;
 }
-
-.header {
-  @apply w-full h-16 bg-headerbg flex items-center justify-center flex-col text-white relative;
+#header {
+  @apply bg-slate-900 text-slate-100 cursor-default h-16 left-0 top-0 sticky w-full z-50 shadow-lg
+  flex items-center text-xl;
 }
-.navbar {
-  @apply flex w-full h-full max-w-7xl mx-auto justify-between items-center px-4 gap-8;
+#header .inner {
+  @apply w-full max-w-7xl mx-auto flex justify-between items-center px-4;
 }
 .logo {
+  @apply text-green-400 flex gap-2 items-center;
 }
-.logo a {
-  @apply w-10;
+.logo img{
+  @apply h-20 rounded-md invert
 }
-.logo img {
-  @apply h-16 invert flex-1;
+.navbar {
+  @apply text-2xl w-fit h-fit gap-6 hidden md:flex;
+}
+.sidebar-toggle.open-sidebar {
+  @apply before:w-screen before:h-screen before:bg-black/10 before:absolute before:top-0 before:left-0 before:z-[-1] before:ease-in-out before:duration-300 before:backdrop-blur-md before:transition-[backdrop-filter];
 }
 
-/*  sidebar */
-.menu {
-  @apply flex flex-col fixed top-0 left-0 w-0 overflow-hidden bg-menu shadow-lg md:shadow-none h-screen transition-[width] ease-in-out duration-300 z-10;
-  @apply md:relative md:w-fit md:h-fit md:justify-end md:bg-transparent;
+.sidebar-toggle.open-sidebar .fi-br-cross {
+  @apply flex;
 }
-.menu-content {
-  @apply flex flex-col p-3 w-full min-w-fit;
-  @apply md:flex-row md:gap-4;
-}
-/* Menu aberto */
-.navbar:has(.menu-button input[type="checkbox"]:checked) .menu {
-  @apply w-fit max-w-[90%] md:min-w-fit;
-}
-/* Menu button */
-.close-menu-icon {
+
+.sidebar-toggle.open-sidebar .fi-br-menu-burger {
   @apply hidden;
 }
-.navbar:has(.menu-button input[type="checkbox"]:checked) .open-menu-icon {
+.sidebar-toggle .fi-br-cross {
   @apply hidden;
 }
-.navbar:has(.menu-button input[type="checkbox"]:checked) .close-menu-icon {
-  @apply block;
+.sidebar-toggle {
+  @apply md:hidden;
 }
-.menu-button {
-  @apply text-xl z-[1] select-none items-center md:hidden before:bg-transparent flex;
+.sidebar {
+  @apply flex gap-6 fixed left-[-100%] z-50 top-0 bg-slate-900 max-w-[75%] min-w-[60%] w-fit h-screen flex-col py-8 px-4 text-4xl duration-300 transition-[left] md:hidden;
 }
-.navbar:has(.menu-button input[type="checkbox"]:checked) .menu-button {
-  @apply before:w-screen before:h-screen before:bg-black/70 before:absolute before:top-0 before:left-0 before:z-[-1] before:ease-in-out before:duration-300 before:backdrop-blur-[3px] before:transition-[backdrop-filter];
+.sidebar.opened-sidebar {
+  @apply left-0;
 }
-.menu-button input[type="checkbox"] {
-  @apply hidden;
+.sidebar-nav {
+  @apply flex flex-col gap-6 text-4xl text-slate-100;
 }
 /* Pesquisa */
 
@@ -64,46 +58,65 @@ body {
 .pesquisa button {
   @apply pl-2;
 }
-.main {
-  @apply max-w-7xl mx-auto px-4;
+
+.home {
+  @apply w-full min-h-screen relative px-3 pt-0 pb-4 flex
+}
+.home .bg {
+  @apply top-0 left-0 absolute z-[-1] w-full h-full object-cover
+}
+.home .content-box{
+  
+}
+.prose a:not(.underline){
+  text-decoration: none;
 }
 .product {
-  @apply grid grid-cols-1 overflow-hidden relative  md:grid-cols-2 items-center gap-4 p-4;
+  @apply grid grid-cols-1 relative  md:grid-cols-2 items-center gap-4;
 }
-.produto-imagem{
-  @apply max-w-64
+.produto-imagem {
+  @apply max-w-64;
 }
 .galery {
-  @apply shadow-lg   w-full h-full justify-center rounded-md p-4 bg-white;
+  @apply shadow-lg relative  w-full h-full justify-center flex items-center p-4 bg-white;
 }
 .galery img {
-  @apply mx-auto flex justify-center items-center;
+  @apply p-6 bg-white rounded-md
 }
 .detalhes {
-  @apply space-y-6 h-full;
+  @apply space-y-6 h-full p-4 mx-auto;
 }
 .product-info {
-  @apply flex justify-between  items-center;
+  @apply flex justify-between  items-center 
 }
 .product-info h2 {
-  @apply text-2xl font-extrabold;
+  @apply text-3xl font-extrabold m-0
+}
+.product-name {
+  @apply text-gray-800;
 }
 .avaliacao i {
-  @apply text-amber-400;
+  @apply text-amber-500 text-lg;
 }
-
+.preco{
+  @apply text-green-700 font-bold text-5xl
+}
 .select-color {
-  @apply flex items-center space-x-3;
+  @apply flex items-center gap-4 ;
 }
 .color-label {
-  @apply relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-900;
+  @apply relative flex cursor-pointer items-center justify-center rounded-full  focus:outline-none ring-gray-900 border-2 border-transparent;
 }
 .color-icon {
-  @apply h-8 w-8  rounded-full border border-black border-opacity-10;
+  @apply h-8 w-8  rounded-full border border-black border-opacity-30;
 }
 
-label:has(input[type="radio"]:checked) {
-  @apply border-2 border-primary;
+.color-label:has(input[type="radio"]:checked) {
+  @apply border-2 border-amber-600 scale-125 duration-300 transition-all
+}
+
+.select-quantity .quantidade{
+  @apply bg-primary
 }
 .modelo form {
   @apply space-y-4;
@@ -112,28 +125,32 @@ label:has(input[type="radio"]:checked) {
   @apply space-y-3;
 }
 .button-primary {
-  @apply bg-primary px-4 py-2 rounded-md shadow-md;
+  @apply bg-primary text-slate-100 px-4 py-2 rounded-md shadow-md h-10 font-bold text-lg;
 }
-.button-accent{
-  @apply bg-accent px-4 py-2 rounded-md shadow-md;
+.button-accent {
+  @apply bg-accent w-10 h-10 rounded-md shadow-md;
 }
-.input-quantidade{
-  @apply text-xl 
+.input-quantidade {
+  @apply text-xl w-full  flex justify-between
 }
-.input-quantidade button{
-  
-  @apply border border-slate-500 bg-accent w-8 rounded-md
+.input-quantidade .setQuantidade button {
+  @apply border border-slate-500 w-10 h-10 rounded-md bg-accent text-xl
 }
-.input-quantidade input{
-  @apply w-12 text-center
+.input-quantidade .setQuantidade input {
+  @apply w-12 h-10 text-center bg-transparent border border-slate-500 rounded-md focus:outline-primary;
 }
-
-
-
-
+.quantidade{
+  @apply bg-accent
+}
+.comprar{
+  @apply w-fit 
+}
 footer {
-  @apply bg-headerbg text-slate-950
+  @apply bg-gray-800 text-slate-100
 }
-.footer-container{
-  @apply px-4 py-3 max-w-7xl md:flex space-y-6 md:space-y-0  mx-auto md:justify-between 
+.footer-container {
+  @apply px-4 py-3 max-w-7xl md:flex space-y-6 md:space-y-0  mx-auto md:justify-between  border-b mb-2;
+}
+.footer-bottom{
+  @apply text-center mx-auto
 }
