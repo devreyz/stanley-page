@@ -147,10 +147,10 @@ body {
   @apply w-fit 
 }
 footer {
-  @apply bg-gray-800 text-slate-100
+  @apply bg-slate-950 text-slate-100
 }
 .footer-container {
-  @apply px-4 py-3 max-w-7xl md:flex space-y-6 md:space-y-0  mx-auto md:justify-between  border-b mb-2;
+  @apply px-4 py-3 max-w-7xl md:flex space-y-6 md:space-y-0  mx-auto md:justify-between  border-b border-b-slate-200/20 mb-2;
 }
 .footer-bottom{
   @apply text-center mx-auto
