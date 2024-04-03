@@ -1124,8 +1124,8 @@ video {
   --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
 }
 
-.p-4 {
-  padding: 1rem;
+.p-0 {
+  padding: 0px;
 }
 
 .px-4 {
@@ -1454,8 +1454,8 @@ body {
 
 .product-info h2 {
   margin: 0px;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 800;
 }
 
@@ -1472,8 +1472,8 @@ body {
 }
 
 .preco {
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));

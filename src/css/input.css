@@ -90,16 +90,17 @@ body {
   @apply flex justify-between  items-center 
 }
 .product-info h2 {
-  @apply text-3xl font-extrabold m-0
+  @apply text-2xl font-extrabold m-0
 }
 .product-name {
   @apply text-gray-800;
 }
+
 .avaliacao i {
   @apply text-amber-500 text-lg;
 }
 .preco{
-  @apply text-green-700 font-bold text-5xl
+  @apply text-green-700 font-bold text-3xl
 }
 .select-color {
   @apply flex items-center gap-4 ;
